@@ -1,0 +1,15 @@
+<h1> My tasks </h1>
+<ul>
+  <% @tasks.each do |task| %>
+  <%# j ínsere un lien dans ma list, j'interpol les titres aue je veux afficher
+  et je cherche le chemin du detail pour chaque task en fonction de son id%>
+  <% if task.completed %>
+  <span>X</span>
+  <% else %>
+  <span>[ ]</span>
+  <% end %>
+    <li style = "list-style-type: none; text-decoration: none;" > <%=link_to  "#{task.title}", task_path(task.id), target:"_blank"%> </li>
+  <% end %>
+</ul>
+
+<%= link_to "Create a task", tasks_new_path%>

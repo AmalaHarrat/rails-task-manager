@@ -1,0 +1,10 @@
+<h1> My task </h1>
+<%# BOUTON NE MARCHE PAS %>
+<%= link_to "Edit this task", edit_task_path%>
+<br>
+<div>
+<h2><%= @tasks.title %></h2>
+<p><%= @tasks.details %></p>
+
+<%= link_to "Back to list", tasks_path%>
+</div>
